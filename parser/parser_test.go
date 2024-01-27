@@ -285,3 +285,23 @@ func TestParsingInfixExpressions(t *testing.T) {
 		}
 	}
 }
+
+func testIdentifier(t *testing.T, exp ast.Expression, value string) bool {
+	ident, ok := exp.(*ast.Identifier)
+	if !ok {
+		t.Errorf("exp not *ast.Identifier. got = %v", exp)
+		return false
+	}
+
+	if ident.Value != value {
+		t.Errorf("ident.Value not %v, got %v", value, ident.Value)
+		return false
+	}
+
+	if ident.TokenLiteral() != value {
+		t.Errorf("ident.TokenLiteral not %v. got = %v", value, ident.TokenLiteral())
+		return false
+	}
+
+	return true
+}
