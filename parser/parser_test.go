@@ -326,6 +326,10 @@ func TestOperatorPrecedenceParsing(t *testing.T) {
 			"(-(5 + 5))",
 		},
 		{
+			"2 / 2 *2",
+			"((2 / 2) * 2)",
+		},
+		{
 			"!(true == true)",
 			"(!(true == true))",
 		},
