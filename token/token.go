@@ -11,7 +11,6 @@ const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
 	IDENT   = "IDENT"
-	INT     = "INT"
 
 	// OPERATORS
 	ASSIGN   = "="
@@ -29,6 +28,8 @@ const (
 	IF       = "IF"
 	ELSE     = "ELSE"
 	RETURN   = "RETURN"
+	INT      = "INT"
+	STRING   = "STRING"
 
 	EQ        = "=="
 	NOT_EQ    = "!="
@@ -40,6 +41,9 @@ const (
 	RPAREN    = ")"
 	LBRACE    = "{"
 	RBRACE    = "}"
+	LBRACKET  = "["
+	RBRACKET  = "]"
+	COLON     = ":"
 )
 
 var keywords = map[string]TokenType{
